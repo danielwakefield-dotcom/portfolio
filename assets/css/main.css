@@ -1,0 +1,233 @@
+/* VARS */
+:root {
+  --black: #111;
+  --dark-black: #0c0c0c;
+  --grey: #777777;
+  --lgrey: #ccc;
+  --white: #fff;
+  --primary: #07625c;
+  --primary-alpha: rgba(7, 98, 92, 0.75);
+  --secondary: #0deadd;
+  --secondary-alpha: rgba(13, 234, 221, 0.75);
+  --tertiary: rgb(166, 255, 250);
+  --tertiary-alpha: rgba(166, 255, 250, 0.75);
+  --black-alpha: rgba(0, 0, 0, 0.75);
+  --white-alpha: rgba(255, 255, 255, 0.85);
+}
+
+/* RESET */
+html {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  background: #000;
+  color: var(--white);
+  overflow: hidden;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+div {
+  display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p {
+  margin: 0;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+p {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.3em;
+  margin: 0 0 1em 0;
+}
+p b {
+  font-weight: 600;
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+:focus {
+  outline: none;
+}
+
+/* vue css */
+#__nuxt,
+#__layout {
+  width: 100%;
+}
+.page-enter-active,
+.page-leave-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all ease 0.6s;
+}
+
+/* Entering page transition */
+.page-enter-active.page-enter-to {
+  transition: all ease 0.6s;
+  transition-delay: 0.3s;
+}
+
+/* Leaving page transition with a delay */
+.page-leave-active {
+  transition-delay: 0; /* 1 second delay before starting the transition */
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+/* Initial state of entering page and final state of leaving page */
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+  transform: scale(0.94);
+}
+
+
+/* layout elements */
+.ctr {
+  padding: 0 1.5rem;
+  width: 100%;
+}
+
+#app {
+  position: relative;
+  color: var(--black);
+  height: 100vh;
+  width: 100%;
+  transition: filter ease 1s;
+}
+
+#app.light {
+  background: #ccc;
+}
+
+#app[data-nav-status='open'] #main {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+#main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: block;
+  height: 100vh;
+  width: 100%;
+  overflow-y: scroll;
+  transition: all ease 0.6s;
+}
+
+#app[data-nav-status='open'] > #main {
+  filter: blur(10px);
+}
+
+#app[data-preload-status='preloading'] #main {
+  opacity: 0;
+}
+
+#app[data-preload-status='preloaded'] #main {
+  opacity: 1;
+}
+
+#app[data-preload-status='preloaded'][data-glitch-status='stable'] #main {
+  opacity: 1;
+}
+
+
+#app[data-heat='teal'] {
+  filter: hue-rotate(0);
+}
+
+#app[data-heat='green'] {
+  filter: hue-rotate(-98deg);
+}
+
+#app[data-heat='red'] {
+  filter: hue-rotate(30deg) saturate(2);
+}
+
+#app[data-heat='violet'] {
+  filter: hue-rotate(90deg);
+}
+
+#app[data-heat='orange'] {
+  filter: hue-rotate(220deg);
+}
+
+#app[data-heat='pink'] {
+  filter: hue-rotate(157deg);
+}
+
+#app[data-heat='blue'] {
+  filter: hue-rotate(56deg);
+}
+
+@media only screen and (min-width: 600px) {
+  .ctr {
+    padding: 0 2rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .ctr {
+    padding: 0 8rem;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+  .ctr {
+    padding: 0 10rem;
+  }
+}
+
+@media only screen and (min-width: 1360px) {
+  #main {
+    overflow: hidden;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .ctr {
+    padding: 0 14rem;
+  }
+}
+
+@media only screen and (min-width: 1760px) {
+  .ctr {
+    padding: 0 16rem;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .ctr {
+    padding: 0 20rem;
+  }
+}

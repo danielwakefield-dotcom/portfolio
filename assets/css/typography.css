@@ -1,0 +1,114 @@
+h1,
+.title {
+  color: var(--tertiary-alpha);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+}
+
+h1 > span,
+.title > span {
+  display: block;
+  letter-spacing: 1px;
+}
+
+h1 > span:nth-child(odd),
+.title > span:nth-child(odd) {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-color: var(--tertiary-alpha);
+  -webkit-text-stroke: 1px;
+}
+
+.subtitle {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--tertiary-alpha);
+  margin: 0 0 0.5rem 0;
+}
+
+.subtitle > span {
+  font-size: 0.8rem;
+  display: inline;
+}
+
+p {
+  color: #fff;;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-family: consolas, monospace;
+  line-height: 1.4;
+  margin: 0 0 1rem 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+button,
+.button {
+  border: 1px solid var(--primary);
+  background: rgba(13, 234, 221, 0.15);
+  color: var(--tertiary);
+  outline: 0;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: all ease 0.3s;
+}
+
+button:hover,
+.button:hover {
+  color: #fff;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  /* add styles for desktop here */
+}
+
+@media only screen and (min-width: 600px) {
+  /* add styles for tablet here */
+}
+
+@media only screen and (min-width: 768px) {
+  /* add styles for tablet here */
+}
+
+
+@media only screen and (min-width: 1024px) {
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  h1,
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  h1,
+  .title {
+    font-size: 3.6rem;
+  }
+}
+
+@media only screen and (min-width: 1760px) {
+  /* add styles for desktop here */
+}
+
+@media only screen and (min-width: 1920px) {
+  /* add styles for hd desktop here */
+}
