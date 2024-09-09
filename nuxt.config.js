@@ -1,4 +1,4 @@
-import axios from 'axios'
+// import axios from 'axios'
 
 export default {
   // Use when creating dist in a sub folder
@@ -52,8 +52,8 @@ export default {
   ],
   modules: [
     '@nuxtjs/pwa',
-    'nuxt-webfontloader',
-    '@nuxtjs/axios'
+    'nuxt-webfontloader'
+    // '@nuxtjs/axios'
   ],
   pwa: {
     manifest: {
@@ -101,7 +101,7 @@ export default {
       'GLTFLoader.js',
       'GlitchPass',
       'DRACOLoader',
-      'OBJLoader.js',
+      // 'OBJLoader.js',
       'MTLLoader.js',
       'OrbitControls.js',
       'TransformControls.js',
@@ -115,10 +115,10 @@ export default {
       'RGBELoader',
       'ShaderMaterial',
       'PlaneGeometry',
-      'Mesh',
-      'Vector2',
-      'GUI',
-      'Raycaster'
+      'Mesh'
+      // 'Vector2',
+      // 'GUI',
+      // 'Raycaster'
     ],
     extend (config, ctx) {
       config.module.rules.push({
